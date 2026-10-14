@@ -1,0 +1,10 @@
+<div>
+  <span [class.desenchufada]="!this.enchufada()">{{
+    encendida ? "La lampara está ENCENDIDA 💡" : "La lampara está APAGADA ❌"
+  }}</span>
+</div>
+<div class="boton">
+  <button [disabled]="!this.enchufada()" (click)="onApagarEncender()">
+    {{ encendida ? "APAGAR" : "ENCENDER" }}
+  </button>
+</div>
